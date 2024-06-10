@@ -26,6 +26,19 @@ export default component$(() => {
     })
   return (
     <> 
+    <section>
+    <h1>some text</h1>
+    </section>
+    <section>
+    <svg>
+        <defs>
+            <mask>
+                <h1><text>masked wala</text></h1>
+                <rect></rect>
+            </mask>
+        </defs>
+    </svg>
+    </section>
     </>
   ); 
 });
