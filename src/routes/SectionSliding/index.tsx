@@ -9,8 +9,7 @@ export default component$(() => {
     useVisibleTask$(() => {
     const lenis = new Lenis({
       lerp: .05,
-      wheelMultiplier: 1
-    })
+      wheelMultiplier: 1 })
     function raf(time: number) {
       lenis.raf(time)
       requestAnimationFrame(raf)
@@ -36,7 +35,8 @@ export default component$(() => {
         </div>
     </section>
     </>
-    ) });
+    ) 
+});
 
 export const head: DocumentHead = {
   title: "Welcome to Qwik",
