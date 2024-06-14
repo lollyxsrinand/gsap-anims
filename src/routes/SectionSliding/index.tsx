@@ -2,8 +2,6 @@ import { component$, useStyles$, useStylesScoped$, useVisibleTask$ } from "@buil
 import styles from './styles.css?inline'
 import type { DocumentHead } from "@builder.io/qwik-city";
 import Lenis from "lenis";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
 
 export default component$(() => {
     useStylesScoped$(styles)
@@ -11,7 +9,7 @@ export default component$(() => {
     useVisibleTask$(() => {
     const lenis = new Lenis({
       lerp: .05,
-      wheelMultiplier: 1.75
+      wheelMultiplier: 1
     })
     function raf(time: number) {
       lenis.raf(time)
@@ -20,28 +18,25 @@ export default component$(() => {
     requestAnimationFrame(raf)
   })
 
-    // eslint-disable-next-line qwik/no-use-visible-task
-    useVisibleTask$(() => {
-        gsap.registerPlugin(ScrollTrigger)
-    })
   return (
     <> 
     <section>
-    <h1>some text</h1>
+        <div style="background-color: white; color:black">
+        <h1>THIS IS VERY</h1>
+        </div>
     </section>
     <section>
-    <svg>
-        <defs>
-            <mask>
-                <h1><text>masked wala</text></h1>
-                <rect></rect>
-            </mask>
-        </defs>
-    </svg>
+        <div style="background-color: black; color: white">
+        <h1>ODDLY SATISFYING</h1>
+        </div>
+    </section>
+    <section>
+        <div style="background-color: white; color: black">
+        <h1>LESSGOOO</h1>
+        </div>
     </section>
     </>
-  ); 
-});
+    ) });
 
 export const head: DocumentHead = {
   title: "Welcome to Qwik",
